@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MemeTableViewController: UITableViewController, UITableViewDelegate, UITableViewDataSource {
+class MemeTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -37,12 +37,12 @@ class MemeTableViewController: UITableViewController, UITableViewDelegate, UITab
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell:MemeTableViewCellController = self.tableView.dequeueReusableCell(withIdentifier: "cell")! as! MemeTableViewCellController
+        let cell:MemeTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "cell")! as! MemeTableViewCell
         
         let meme = memes[(indexPath as NSIndexPath).row]
         
         cell.memeImageView?.image=meme.memeImage
-        cell.memeLabel?.text=meme.topText!+"..."+meme.bottomTextString!
+        cell.memeLabel?.text=meme.topText!+"..." + meme.bottomText!
         
         return cell
     }

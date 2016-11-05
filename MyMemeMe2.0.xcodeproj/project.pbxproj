@@ -47,6 +47,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E04716421DCDF71700950064 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E076FC351DCA668200A084F4 /* Meme.swift */,
+				E076FC411DCBBB9400A084F4 /* MemeTableViewCell.swift */,
+				E076FC3F1DCBBB5400A084F4 /* MemeCollectionViewCell.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E04716431DCDF72B00950064 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E076FC2C1DCA5CC600A084F4 /* LaunchScreen.storyboard */,
+				E076FC271DCA5CC600A084F4 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		E04716441DCDF73700950064 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E076FC251DCA5CC600A084F4 /* MemeEditorViewController.swift */,
+				E076FC371DCA8DB800A084F4 /* MemeViewController.swift */,
+				E076FC391DCA8E6A00A084F4 /* MemeCollectionViewController.swift */,
+				E076FC3B1DCA8E9400A084F4 /* MemeTableViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		E076FC171DCA5CC600A084F4 = {
 			isa = PBXGroup;
 			children = (
@@ -67,17 +97,11 @@
 			isa = PBXGroup;
 			children = (
 				E076FC231DCA5CC600A084F4 /* AppDelegate.swift */,
-				E076FC251DCA5CC600A084F4 /* MemeEditorViewController.swift */,
-				E076FC271DCA5CC600A084F4 /* Main.storyboard */,
+				E04716421DCDF71700950064 /* Model */,
+				E04716431DCDF72B00950064 /* View */,
+				E04716441DCDF73700950064 /* Controller */,
 				E076FC2A1DCA5CC600A084F4 /* Assets.xcassets */,
-				E076FC2C1DCA5CC600A084F4 /* LaunchScreen.storyboard */,
 				E076FC2F1DCA5CC600A084F4 /* Info.plist */,
-				E076FC351DCA668200A084F4 /* Meme.swift */,
-				E076FC371DCA8DB800A084F4 /* MemeViewController.swift */,
-				E076FC391DCA8E6A00A084F4 /* MemeCollectionViewController.swift */,
-				E076FC3B1DCA8E9400A084F4 /* MemeTableViewController.swift */,
-				E076FC3F1DCBBB5400A084F4 /* MemeCollectionViewCell.swift */,
-				E076FC411DCBBB9400A084F4 /* MemeTableViewCell.swift */,
 			);
 			path = MyMemeMe2.0;
 			sourceTree = "<group>";
@@ -326,6 +350,7 @@
 				E076FC341DCA5CC600A084F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

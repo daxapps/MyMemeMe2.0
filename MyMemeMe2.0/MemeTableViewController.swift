@@ -16,7 +16,6 @@ class MemeTableViewController: UIViewController, UITableViewDelegate, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.navigationItem.leftBarButtonItem = self.editButtonItem()
         updateMemes()
         self.edgesForExtendedLayout = UIRectEdge()
     }
@@ -27,8 +26,8 @@ class MemeTableViewController: UIViewController, UITableViewDelegate, UITableVie
         tableView.reloadData()
     }
     
-    func updateMemes(){
-        memes=(UIApplication.shared.delegate as! AppDelegate).memes
+    func updateMemes() {
+        memes = (UIApplication.shared.delegate as! AppDelegate).memes
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -37,12 +36,12 @@ class MemeTableViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell:MemeTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "cell")! as! MemeTableViewCell
+        let cell: MemeTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "cell")! as! MemeTableViewCell
         
         let meme = memes[(indexPath as NSIndexPath).row]
         
-        cell.memeImageView?.image=meme.memeImage
-        cell.memeLabel?.text=meme.topText!+"..." + meme.bottomText!
+        cell.memeImageView?.image = meme.memeImage
+        cell.memeLabel?.text = meme.topText! + " / " + meme.bottomText!
         
         return cell
     }
@@ -68,9 +67,9 @@ class MemeTableViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if (editingStyle == UITableViewCellEditingStyle.delete){
+        if (editingStyle == UITableViewCellEditingStyle.delete) {
             memes.remove(at: (indexPath as NSIndexPath).row)
-            (UIApplication.shared.delegate as! AppDelegate).memes=memes
+            (UIApplication.shared.delegate as! AppDelegate).memes = memes
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }

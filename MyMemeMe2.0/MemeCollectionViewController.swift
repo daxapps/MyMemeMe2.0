@@ -46,11 +46,10 @@ class MemeCollectionViewController: UIViewController, UICollectionViewDataSource
     }
     
     func updateMemes(){
-        memes=(UIApplication.shared.delegate as! AppDelegate).memes
+        memes = (UIApplication.shared.delegate as! AppDelegate).memes
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {        
         return memes.count
     }
     

@@ -11,11 +11,12 @@ import UIKit
 class MemeViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
+    
     var meme: Meme!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title="Detail"
+        title = "Detail"
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             title: "Edit",
@@ -42,7 +43,7 @@ class MemeViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let memeEditorController = segue.destination as! MemeEditorViewController
-        memeEditorController.meme=meme
+        memeEditorController.meme = meme
     }
 
 }

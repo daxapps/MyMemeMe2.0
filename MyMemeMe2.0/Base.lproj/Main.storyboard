@@ -25,11 +25,11 @@
             </objects>
             <point key="canvasLocation" x="-488" y="74"/>
         </scene>
-        <!--Meme Table View Controller-->
+        <!--Sent Memes-->
         <scene sceneID="eJd-Y9-fBD">
             <objects>
-                <tableViewController title="Meme Table View Controller" id="Ma0-pM-rir" customClass="MemeTableViewController" customModule="MyMemeMe2_0" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="JJu-eD-P46">
+                <tableViewController title="Sent Memes" id="Ma0-pM-rir" customClass="MemeTableViewController" customModule="MyMemeMe2_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="137" sectionHeaderHeight="28" sectionFooterHeight="28" id="JJu-eD-P46">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -38,7 +38,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="138"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mwa-W3-fqU" id="L0e-pa-g14">
-                                    <frame key="frameInset" width="375" height="138"/>
+                                    <frame key="frameInset" width="375" height="137.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPo-Ud-r8f">
@@ -66,7 +66,13 @@
                             <outlet property="delegate" destination="Ma0-pM-rir" id="BZx-nN-VQ9"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="SWd-dM-gVN"/>
+                    <navigationItem key="navigationItem" title="Sent Memes" id="SWd-dM-gVN">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="jhJ-vP-XEr">
+                            <connections>
+                                <action selector="createMeme:" destination="Ma0-pM-rir" id="L7e-oA-CND"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="JJu-eD-P46" id="VeF-WM-kPE"/>
                         <segue destination="suh-ne-2WS" kind="show" identifier="detailSegue" id="4Mr-M8-Udk"/>
@@ -80,7 +86,7 @@
         <scene sceneID="bv8-Tj-Cnw">
             <objects>
                 <navigationController id="Np6-ML-3sv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Table View" selectedImage="table_30x30" id="ro0-Xu-qna"/>
+                    <tabBarItem key="tabBarItem" title="Table View" image="table_30x30" id="ro0-Xu-qna"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xBn-Jm-OLR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -114,7 +120,7 @@
         <scene sceneID="RcR-vS-Tlb">
             <objects>
                 <collectionViewController storyboardIdentifier="MemeCollectionViewCell" id="mav-cP-Tfe" customClass="MemeCollectionViewController" customModule="MyMemeMe2_0" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="p8V-Cs-f4a">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="p8V-Cs-f4a">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -309,6 +315,6 @@
         <image name="table_30x30" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1Gw-AT-1vb"/>
+        <segue reference="4Mr-M8-Udk"/>
     </inferredMetricsTieBreakers>
 </document>

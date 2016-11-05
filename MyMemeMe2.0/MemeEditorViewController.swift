@@ -29,8 +29,8 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         reset()
         
         if let meme = meme {
-            memeImage.image=meme.originalImage
-            topTextField.text=meme.topText
+            memeImage.image = meme.originalImage
+            topTextField.text = meme.topText
             bottomTextField.text = meme.bottomText
             shareButton.isEnabled = true
             editMode = true
@@ -56,7 +56,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         unsubscribeFromKeyboardNotifications()
     }
     
-    override var prefersStatusBarHidden : Bool {
+    override var prefersStatusBarHidden: Bool {
         return true
     }
     
@@ -69,10 +69,10 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     func setupTextField(_ textField: UITextField) {
         let memeTextAttributes = [
-            NSStrokeColorAttributeName : UIColor.black,
-            NSForegroundColorAttributeName : UIColor.white,
-            NSFontAttributeName : UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
-            NSStrokeWidthAttributeName : -3
+            NSStrokeColorAttributeName: UIColor.black,
+            NSForegroundColorAttributeName: UIColor.white,
+            NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
+            NSStrokeWidthAttributeName: -5
             ] as [String : Any]
         
         textField.defaultTextAttributes = memeTextAttributes
@@ -143,7 +143,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
                 if self.editMode {
                     self.goToSentMemes()
                 } else {
-                self.dismiss(animated: true, completion: nil)
+                    self.dismiss(animated: true, completion: nil)
                 }
             }
         }
@@ -185,7 +185,6 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     func goToSentMemes() {
         setEditModeUI(false)
-        navigationController?.popToViewController((navigationController?.viewControllers[0])!, animated: true)
     }
     
     //: MARK: Pick an image from photo library or camera

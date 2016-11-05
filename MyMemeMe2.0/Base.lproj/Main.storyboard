@@ -38,7 +38,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="138"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mwa-W3-fqU" id="L0e-pa-g14">
-                                    <frame key="frameInset" width="375" height="137.5"/>
+                                    <frame key="frameInset" width="375" height="138"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPo-Ud-r8f">
@@ -49,7 +49,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RJJ-hd-sBX">
-                                            <frame key="frameInset" minX="8" minY="8" width="120" height="120"/>
+                                            <frame key="frameInset" minX="8" minY="8" width="112" height="122"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </imageView>
@@ -125,26 +125,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LRV-Az-JPH">
-                            <size key="itemSize" width="121" height="140"/>
+                            <size key="itemSize" width="100" height="100"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MemeCollectionViewCell" id="FK2-AR-Bpg" customClass="MemeCollectionViewCell" customModule="MyMemeMe2_0" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="121" height="140"/>
+                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="121" height="140"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F44-Cc-vtj">
-                                            <frame key="frameInset" minX="8" minY="16" width="96" height="109"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F44-Cc-vtj">
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </imageView>
                                     </subviews>
                                 </view>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="F44-Cc-vtj" secondAttribute="bottom" id="KHZ-3z-gpd"/>
+                                    <constraint firstAttribute="trailing" secondItem="F44-Cc-vtj" secondAttribute="trailing" id="LXg-ep-1BI"/>
+                                    <constraint firstItem="F44-Cc-vtj" firstAttribute="leading" secondItem="FK2-AR-Bpg" secondAttribute="leading" id="OUq-iz-IAz"/>
+                                    <constraint firstItem="F44-Cc-vtj" firstAttribute="top" secondItem="FK2-AR-Bpg" secondAttribute="top" id="SfE-K7-jSj"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="memeImageView" destination="F44-Cc-vtj" id="HuY-3k-n8a"/>
                                 </connections>
@@ -190,10 +194,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="XdS-wD-cqV" firstAttribute="top" secondItem="kQS-7o-VCy" secondAttribute="bottom" id="5KS-w1-hEY"/>
-                            <constraint firstAttribute="trailing" secondItem="kQS-7o-VCy" secondAttribute="trailing" id="AP7-WF-H38"/>
-                            <constraint firstItem="kQS-7o-VCy" firstAttribute="leading" secondItem="fRE-vQ-ep9" secondAttribute="leading" id="Lop-42-4nq"/>
-                            <constraint firstItem="kQS-7o-VCy" firstAttribute="top" secondItem="n6F-v5-VEt" secondAttribute="bottom" id="STj-WA-nbI"/>
+                            <constraint firstItem="XdS-wD-cqV" firstAttribute="top" secondItem="kQS-7o-VCy" secondAttribute="bottom" constant="8" symbolic="YES" id="5bH-Vv-KMX"/>
+                            <constraint firstItem="kQS-7o-VCy" firstAttribute="leading" secondItem="fRE-vQ-ep9" secondAttribute="leading" id="7TA-s4-bbg"/>
+                            <constraint firstItem="kQS-7o-VCy" firstAttribute="top" secondItem="n6F-v5-VEt" secondAttribute="bottom" constant="-64" id="OFV-gW-X55"/>
+                            <constraint firstAttribute="trailing" secondItem="kQS-7o-VCy" secondAttribute="trailing" id="pR8-kv-cYM"/>
                         </constraints>
                     </view>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -204,7 +208,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lWD-cI-6K6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1712.8" y="145.27736131934034"/>
+            <point key="canvasLocation" x="1717.5999999999999" y="255.02248875562222"/>
         </scene>
         <!--Meme Editor View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -263,7 +267,7 @@
                                 </constraints>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="40"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2TZ-Ym-sho" userLabel="Bottom Text Field">
                                 <constraints>
@@ -272,7 +276,7 @@
                                 </constraints>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="40"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -307,7 +311,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2409" y="145"/>
+            <point key="canvasLocation" x="2433" y="255"/>
         </scene>
     </scenes>
     <resources>

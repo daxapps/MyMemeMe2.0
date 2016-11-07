@@ -34,11 +34,12 @@ class MemeViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.tabBarController!.tabBar.isHidden = false
+        self.tabBarController!.tabBar.isHidden = true
     }
     
-    func editMeme(_ sender: UIBarButtonItem){
+    func editMeme(_ sender: UIBarButtonItem) {
         performSegue(withIdentifier: "editSegue", sender: nil)
+        self.tabBarController!.tabBar.isHidden = true
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -194,7 +194,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="XdS-wD-cqV" firstAttribute="top" secondItem="kQS-7o-VCy" secondAttribute="bottom" constant="8" symbolic="YES" id="5bH-Vv-KMX"/>
+                            <constraint firstItem="XdS-wD-cqV" firstAttribute="top" secondItem="kQS-7o-VCy" secondAttribute="bottom" constant="-44" id="5bH-Vv-KMX"/>
                             <constraint firstItem="kQS-7o-VCy" firstAttribute="leading" secondItem="fRE-vQ-ep9" secondAttribute="leading" id="7TA-s4-bbg"/>
                             <constraint firstItem="kQS-7o-VCy" firstAttribute="top" secondItem="n6F-v5-VEt" secondAttribute="bottom" constant="-64" id="OFV-gW-X55"/>
                             <constraint firstAttribute="trailing" secondItem="kQS-7o-VCy" secondAttribute="trailing" id="pR8-kv-cYM"/>
@@ -229,7 +229,7 @@
                                 </constraints>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="nMq-fr-rYr"/>
-                                    <barButtonItem systemItem="camera" id="lzh-Wi-kxP" userLabel="Camera Button">
+                                    <barButtonItem tag="1" systemItem="camera" id="lzh-Wi-kxP" userLabel="Camera Button">
                                         <connections>
                                             <action selector="pickAnImage:" destination="BYZ-38-t0r" id="UqX-Je-kQQ"/>
                                         </connections>
